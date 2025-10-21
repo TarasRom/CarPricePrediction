@@ -45,7 +45,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(f"🖨️ {answer_text}")
 
 # 6 Initialize and run the Telegram bot
-BOT_TOKEN = "8425799962:AAFx6tX4yR-GhSQtjYoZjgacD8sUx8aNGvc"
+BOT_TOKEN = "YOUR_BOT_TOKEN"
 app = ApplicationBuilder().token(BOT_TOKEN).build()
 
 app.add_handler(CommandHandler("start", start))
@@ -54,4 +54,5 @@ app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 # Run the bot
 print("✅ Бот запущений. Очікує повідомлення...")
 app.run_polling()
+
 
